@@ -1,0 +1,3 @@
+{
+  "type": "obj(first_historical_data:date,id:integer,is_active:integer,last_historical_data:date,name:string,platform:Platform,slug:string,status:string,symbol:string)"
+}

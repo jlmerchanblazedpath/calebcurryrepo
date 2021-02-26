@@ -1,0 +1,79 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsGetV1ExchangeQuotesLatest"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "ExchangeQuotesLatestResponseModel",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.id",
+        "in": "Query",
+        "name": "id",
+        "remarks": "One or more comma-separated CoinMarketCap exchange IDs. Example: \"1,2\""
+      },
+      {
+        "bind": "args.slug",
+        "in": "Query",
+        "name": "slug",
+        "remarks": "Alternatively, pass a comma-separated list of exchange \"slugs\" (URL friendly all lowercase shorthand version of name with spaces replaced with hyphens). Example: \"binance,gdax\". At least one \"id\" *or* \"slug\" is required."
+      },
+      {
+        "bind": "args.convert",
+        "in": "Query",
+        "name": "convert",
+        "remarks": "Optionally calculate market quotes in up to 120 currencies at once by passing a comma-separated list of cryptocurrency or fiat currency symbols. Each additional convert option beyond the first requires an additional call credit. A list of supported fiat options can be found [here](#section/Standards-and-Conventions). Each conversion is returned in its own \"quote\" object."
+      },
+      {
+        "bind": "args.convertid",
+        "in": "Query",
+        "name": "convert_id",
+        "remarks": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used."
+      }
+    ],
+    "path": "/v1/exchange/quotes/latest",
+    "remarks": "Quotes Latest",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "Successful",
+        "typeName": "ExchangeQuotesLatestResponseModel"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Bad Request",
+        "typeName": "HttpStatus400ErrorObject"
+      },
+      {
+        "httpStatus": "401",
+        "remarks": "Unauthorized",
+        "typeName": "HttpStatus401ErrorObject"
+      },
+      {
+        "httpStatus": "403",
+        "remarks": "Forbidden",
+        "typeName": "HttpStatus403ErrorObject"
+      },
+      {
+        "httpStatus": "429",
+        "remarks": "Too Many Requests",
+        "typeName": "HttpStatus429ErrorObject"
+      },
+      {
+        "httpStatus": "500",
+        "remarks": "Internal Server Error",
+        "typeName": "HttpStatus500ErrorObject"
+      }
+    ],
+    "tags": [
+      "exchange"
+    ]
+  }
+}

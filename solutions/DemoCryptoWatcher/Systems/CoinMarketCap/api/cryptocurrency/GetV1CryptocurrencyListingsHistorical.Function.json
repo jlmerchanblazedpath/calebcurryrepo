@@ -1,0 +1,109 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsGetV1CryptocurrencyListingsHistorical"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "CryptocurrencyListingsLatestResponseModel",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.date",
+        "in": "Query",
+        "name": "date",
+        "remarks": "date (Unix or ISO 8601) to reference day of snapshot."
+      },
+      {
+        "bind": "args.start",
+        "in": "Query",
+        "name": "start",
+        "remarks": "Optionally offset the start (1-based index) of the paginated list of items to return."
+      },
+      {
+        "bind": "args.limit",
+        "in": "Query",
+        "name": "limit",
+        "remarks": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size."
+      },
+      {
+        "bind": "args.convert",
+        "in": "Query",
+        "name": "convert",
+        "remarks": "Optionally calculate market quotes in up to 120 currencies at once by passing a comma-separated list of cryptocurrency or fiat currency symbols. Each additional convert option beyond the first requires an additional call credit. A list of supported fiat options can be found [here](#section/Standards-and-Conventions). Each conversion is returned in its own \"quote\" object."
+      },
+      {
+        "bind": "args.convertid",
+        "in": "Query",
+        "name": "convert_id",
+        "remarks": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used."
+      },
+      {
+        "bind": "args.sort",
+        "in": "Query",
+        "name": "sort",
+        "remarks": "What field to sort the list of cryptocurrencies by."
+      },
+      {
+        "bind": "args.sortdir",
+        "in": "Query",
+        "name": "sort_dir",
+        "remarks": "The direction in which to order cryptocurrencies against the specified sort."
+      },
+      {
+        "bind": "args.cryptocurrencytype",
+        "in": "Query",
+        "name": "cryptocurrency_type",
+        "remarks": "The type of cryptocurrency to include."
+      },
+      {
+        "bind": "args.aux",
+        "in": "Query",
+        "name": "aux",
+        "remarks": "Optionally specify a comma-separated list of supplemental data fields to return. Pass `platform,tags,date_added,circulating_supply,total_supply,max_supply,cmc_rank,num_market_pairs` to include all auxiliary fields."
+      }
+    ],
+    "path": "/v1/cryptocurrency/listings/historical",
+    "remarks": "Listings Historical",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "Successful",
+        "typeName": "CryptocurrencyListingsLatestResponseModel"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Bad Request",
+        "typeName": "HttpStatus400ErrorObject"
+      },
+      {
+        "httpStatus": "401",
+        "remarks": "Unauthorized",
+        "typeName": "HttpStatus401ErrorObject"
+      },
+      {
+        "httpStatus": "403",
+        "remarks": "Forbidden",
+        "typeName": "HttpStatus403ErrorObject"
+      },
+      {
+        "httpStatus": "429",
+        "remarks": "Too Many Requests",
+        "typeName": "HttpStatus429ErrorObject"
+      },
+      {
+        "httpStatus": "500",
+        "remarks": "Internal Server Error",
+        "typeName": "HttpStatus500ErrorObject"
+      }
+    ],
+    "tags": [
+      "cryptocurrency"
+    ]
+  }
+}

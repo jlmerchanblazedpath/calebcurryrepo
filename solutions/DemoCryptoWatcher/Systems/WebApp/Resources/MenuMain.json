@@ -1,0 +1,14 @@
+[
+  {
+    "children": [],
+    "icon": "logo.svg",
+    "text": "Home",
+    "uiComponentName": "UiWatchCoinRepeater"
+  },
+  {
+    "children": [],
+    "icon": "logo.svg",
+    "text": "[[AboutUs]]",
+    "uiComponentName": "UiAboutUs"
+  }
+]

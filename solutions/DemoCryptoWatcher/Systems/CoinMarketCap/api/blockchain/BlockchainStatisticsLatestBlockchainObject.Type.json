@@ -1,0 +1,3 @@
+{
+  "type": "obj(block_reward_static:decimal,consensus_mechanism:string,difficulty:string,first_block_timestamp:date,hashrate_24h:string,id:integer,pending_transactions:integer,reduction_rate:string,slug:string,symbol:string,total_blocks:integer,total_transactions:string,tps_24h:decimal)"
+}

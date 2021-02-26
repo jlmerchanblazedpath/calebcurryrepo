@@ -1,0 +1,3 @@
+{
+  "type": "obj(close:decimal,high:decimal,low:decimal,market_cap:decimal,open:decimal,timestamp:date,volume:decimal)"
+}

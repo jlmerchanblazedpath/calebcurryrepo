@@ -1,0 +1,32 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "id",
+        "type": "integer"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsSelectOne(MyRds.CryptoCoin, This(), id == ^id)"
+      }
+    ],
+    "typeReturn": "CryptoCoin",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "id",
+        "in": "Path",
+        "name": "id",
+        "remarks": "Id."
+      }
+    ],
+    "path": "/crypto-coin/{id}",
+    "remarks": "Allows to get a CryptoCoin.",
+    "responses": []
+  }
+}

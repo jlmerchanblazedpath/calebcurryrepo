@@ -1,0 +1,46 @@
+{
+  "systems": [
+    {
+      "name": "CoinMarketCap",
+      "type": "RestApi",
+      "x": 435,
+      "y": 106
+    },
+    {
+      "name": "MyMicroservice",
+      "type": "Microservice",
+      "x": 189,
+      "y": 272
+    },
+    {
+      "name": "MyRds",
+      "type": "RelationalDatabase",
+      "x": 439,
+      "y": 274
+    },
+    {
+      "name": "WebApp",
+      "type": "WebFrontend",
+      "x": 187,
+      "y": 109
+    }
+  ],
+  "references": [
+    {
+      "fromSystemName": "MyMicroservice",
+      "toSystemName": "CoinMarketCap"
+    },
+    {
+      "fromSystemName": "MyMicroservice",
+      "toSystemName": "MyRds"
+    },
+    {
+      "fromSystemName": "WebApp",
+      "toSystemName": "CoinMarketCap"
+    },
+    {
+      "fromSystemName": "WebApp",
+      "toSystemName": "MyMicroservice"
+    }
+  ]
+}

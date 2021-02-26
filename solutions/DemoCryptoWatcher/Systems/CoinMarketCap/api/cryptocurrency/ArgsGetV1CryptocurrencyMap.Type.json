@@ -1,0 +1,3 @@
+{
+  "type": "obj(listingstatus: string, start: integer, limit: integer, sort: string, symbol: string, aux: string)"
+}

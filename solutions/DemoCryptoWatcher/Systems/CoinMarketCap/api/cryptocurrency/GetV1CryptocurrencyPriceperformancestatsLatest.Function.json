@@ -1,0 +1,97 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsGetV1CryptocurrencyPriceperformancestatsLatest"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "CryptocurrencyPricePerformanceStatsLatestResponseModel",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.id",
+        "in": "Query",
+        "name": "id",
+        "remarks": "One or more comma-separated cryptocurrency CoinMarketCap IDs. Example: 1,2"
+      },
+      {
+        "bind": "args.slug",
+        "in": "Query",
+        "name": "slug",
+        "remarks": "Alternatively pass a comma-separated list of cryptocurrency slugs. Example: \"bitcoin,ethereum\""
+      },
+      {
+        "bind": "args.symbol",
+        "in": "Query",
+        "name": "symbol",
+        "remarks": "Alternatively pass one or more comma-separated cryptocurrency symbols. Example: \"BTC,ETH\". At least one \"id\" *or* \"slug\" *or* \"symbol\" is required for this request."
+      },
+      {
+        "bind": "args.timeperiod",
+        "in": "Query",
+        "name": "time_period",
+        "remarks": "Specify one or more comma-delimited time periods to return stats for. `all_time` is the default. Pass `all_time,yesterday,24h,7d,30d,90d,365d` to return all supported time periods. All rolling periods have a rolling close time of the current request time. For example `24h` would have a close time of now and an open time of 24 hours before now. *Please note: `yesterday` is a UTC period and currently does not currently support `high` and `low` timestamps.*"
+      },
+      {
+        "bind": "args.convert",
+        "in": "Query",
+        "name": "convert",
+        "remarks": "Optionally calculate quotes in up to 120 currencies at once by passing a comma-separated list of cryptocurrency or fiat currency symbols. Each additional convert option beyond the first requires an additional call credit. A list of supported fiat options can be found [here](#section/Standards-and-Conventions). Each conversion is returned in its own \"quote\" object."
+      },
+      {
+        "bind": "args.convertid",
+        "in": "Query",
+        "name": "convert_id",
+        "remarks": "Optionally calculate quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used."
+      },
+      {
+        "bind": "args.skipinvalid",
+        "in": "Query",
+        "name": "skip_invalid",
+        "remarks": "Pass `true` to relax request validation rules. When requesting records on multiple cryptocurrencies an error is returned if no match is found for 1 or more requested cryptocurrencies. If set to true, invalid lookups will be skipped allowing valid cryptocurrencies to still be returned."
+      }
+    ],
+    "path": "/v1/cryptocurrency/price-performance-stats/latest",
+    "remarks": "Price Performance Stats",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "Successful",
+        "typeName": "CryptocurrencyPricePerformanceStatsLatestResponseModel"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Bad Request",
+        "typeName": "HttpStatus400ErrorObject"
+      },
+      {
+        "httpStatus": "401",
+        "remarks": "Unauthorized",
+        "typeName": "HttpStatus401ErrorObject"
+      },
+      {
+        "httpStatus": "403",
+        "remarks": "Forbidden",
+        "typeName": "HttpStatus403ErrorObject"
+      },
+      {
+        "httpStatus": "429",
+        "remarks": "Too Many Requests",
+        "typeName": "HttpStatus429ErrorObject"
+      },
+      {
+        "httpStatus": "500",
+        "remarks": "Internal Server Error",
+        "typeName": "HttpStatus500ErrorObject"
+      }
+    ],
+    "tags": [
+      "cryptocurrency"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "cryptoCoin",
+        "type": "CryptoCoin"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsInsert(MyRds.CryptoCoin, ^cryptoCoin)"
+      }
+    ],
+    "typeReturn": "integer",
+    "variables": []
+  },
+  "routing": {
+    "method": "POST",
+    "parameters": [
+      {
+        "bind": "cryptoCoin",
+        "in": "Body",
+        "name": "body",
+        "remarks": "CryptoCoin to be created."
+      }
+    ],
+    "path": "/crypto-coin",
+    "remarks": "Allows to create a new CryptoCoin.",
+    "responses": []
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "systemName": "WebApp",
+      "action": "build",
+      "buildPort": 9080
+    },
+    {
+      "systemName": "MyMicroservice",
+      "action": "build",
+      "parameters": [
+        {
+          "configParameterName": "RestServiceApiKey",
+          "value": "5e97dffa-c6b2-424e-be19-23afe816ad74"
+        }
+      ]
+    },
+    {
+      "systemName": "CoinMarketCap",
+      "action": "connect",
+      "connectionData": {
+        "url": "https://pro-api.coinmarketcap.com"
+      }
+    },
+    {
+      "systemName": "MyRds",
+      "action": "mock",
+      "mockInitialization": {
+        "records": [
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "Bitcoin",
+            "name": "Bitcoin"
+          },
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "Ethereum",
+            "name": "Ethereum"
+          }
+        ]
+      }
+    }
+  ]
+}

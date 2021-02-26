@@ -1,0 +1,32 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "id",
+        "type": "integer"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsDelete(MyRds.CryptoCoin, id == ^id)"
+      }
+    ],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "DELETE",
+    "parameters": [
+      {
+        "bind": "id",
+        "in": "Path",
+        "name": "id",
+        "remarks": "Id."
+      }
+    ],
+    "path": "/crypto-coin/{id}",
+    "remarks": "Allows to delete a CryptoCoin.",
+    "responses": []
+  }
+}

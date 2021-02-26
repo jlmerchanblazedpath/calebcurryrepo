@@ -1,0 +1,79 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsGetV1FiatMap"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "FiatMapResponseModel",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.start",
+        "in": "Query",
+        "name": "start",
+        "remarks": "Optionally offset the start (1-based index) of the paginated list of items to return."
+      },
+      {
+        "bind": "args.limit",
+        "in": "Query",
+        "name": "limit",
+        "remarks": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size."
+      },
+      {
+        "bind": "args.sort",
+        "in": "Query",
+        "name": "sort",
+        "remarks": "What field to sort the list by."
+      },
+      {
+        "bind": "args.includemetals",
+        "in": "Query",
+        "name": "include_metals",
+        "remarks": "Pass `true` to include precious metals."
+      }
+    ],
+    "path": "/v1/fiat/map",
+    "remarks": "CoinMarketCap ID Map",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "Successful",
+        "typeName": "FiatMapResponseModel"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Bad Request",
+        "typeName": "HttpStatus400ErrorObject"
+      },
+      {
+        "httpStatus": "401",
+        "remarks": "Unauthorized",
+        "typeName": "HttpStatus401ErrorObject"
+      },
+      {
+        "httpStatus": "403",
+        "remarks": "Forbidden",
+        "typeName": "HttpStatus403ErrorObject"
+      },
+      {
+        "httpStatus": "429",
+        "remarks": "Too Many Requests",
+        "typeName": "HttpStatus429ErrorObject"
+      },
+      {
+        "httpStatus": "500",
+        "remarks": "Internal Server Error",
+        "typeName": "HttpStatus500ErrorObject"
+      }
+    ],
+    "tags": [
+      "fiat"
+    ]
+  }
+}

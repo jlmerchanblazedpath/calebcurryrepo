@@ -1,0 +1,33 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "SetValue",
+            "expression": "{}",
+            "widgetName": "htmlrenderer1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": []
+      },
+      "name": "main_init"
+    }
+  ],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "htmlTemplate": "<div>\n  <section class=\"article-body simple\"><div id=\"node-2\" class=\"article-pharagraph\"><p class=\"text\">CryptoWatcher is a demo media platform for the next generation of investors exploring how cryptocurrencies and digital assets are contributing to the evolution of the global financial system. Its mandate is to inform, educate, and connect the global investment community through news, data, events and education.</p></div><div id=\"node-3\" class=\"article-pharagraph\"><p class=\"text\">Founded in May 2021, CryptoWatcher seeks to reach users interested in digital assets and blockchain technology through its \n          <a href=\"/\">website</a>, \n          <a href=\"https://twitter.com/coindesk\" target=\"_blank\" rel=\"noopener noreferrer\">social</a> \n          <a href=\"https://facebook.com/coindesk\" target=\"_blank\" rel=\"noopener noreferrer\">media</a>, \n          <a href=\"/newsletters\">newsletters</a>, \n          <a href=\"/podcasts\">podcasts</a>, \n          <a href=\"https://www.youtube.com/coindesk\" target=\"_blank\" rel=\"noopener noreferrer\">video</a>,\n          <a href=\"/research-archive\">research</a> and\n          <a href=\"/events\">live events</a>.\n          CryptoWatcher uses the original price reference rate known as the Bitcoin Price Index that exists since 2013 which is widely sourced in the media including The Wall Street Journal, Financial Times, CNBC, and many others on a daily basis.</p></div>\n    </section>\n</div>",
+        "name": "htmlrenderer1",
+        "widget": "HtmlRenderer"
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}

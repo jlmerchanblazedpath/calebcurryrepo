@@ -1,0 +1,91 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsGetV1ToolsPriceconversion"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "ToolsPriceConversionResponseModel",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.amount",
+        "in": "Query",
+        "name": "amount",
+        "remarks": "An amount of currency to convert. Example: 10.43"
+      },
+      {
+        "bind": "args.id",
+        "in": "Query",
+        "name": "id",
+        "remarks": "The CoinMarketCap currency ID of the base cryptocurrency or fiat to convert from. Example: \"1\""
+      },
+      {
+        "bind": "args.symbol",
+        "in": "Query",
+        "name": "symbol",
+        "remarks": "Alternatively the currency symbol of the base cryptocurrency or fiat to convert from. Example: \"BTC\". One \"id\" *or* \"symbol\" is required."
+      },
+      {
+        "bind": "args.time",
+        "in": "Query",
+        "name": "time",
+        "remarks": "Optional timestamp (Unix or ISO 8601) to reference historical pricing during conversion. If not passed, the current time will be used. If passed, we'll reference the closest historic values available for this conversion."
+      },
+      {
+        "bind": "args.convert",
+        "in": "Query",
+        "name": "convert",
+        "remarks": "Pass up to 120 comma-separated fiat or cryptocurrency symbols to convert the source amount to."
+      },
+      {
+        "bind": "args.convertid",
+        "in": "Query",
+        "name": "convert_id",
+        "remarks": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used."
+      }
+    ],
+    "path": "/v1/tools/price-conversion",
+    "remarks": "Price Conversion",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "Successful",
+        "typeName": "ToolsPriceConversionResponseModel"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Bad Request",
+        "typeName": "HttpStatus400ErrorObject"
+      },
+      {
+        "httpStatus": "401",
+        "remarks": "Unauthorized",
+        "typeName": "HttpStatus401ErrorObject"
+      },
+      {
+        "httpStatus": "403",
+        "remarks": "Forbidden",
+        "typeName": "HttpStatus403ErrorObject"
+      },
+      {
+        "httpStatus": "429",
+        "remarks": "Too Many Requests",
+        "typeName": "HttpStatus429ErrorObject"
+      },
+      {
+        "httpStatus": "500",
+        "remarks": "Internal Server Error",
+        "typeName": "HttpStatus500ErrorObject"
+      }
+    ],
+    "tags": [
+      "tools"
+    ]
+  }
+}

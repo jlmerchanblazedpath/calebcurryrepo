@@ -1,0 +1,39 @@
+{
+  "betweens": [],
+  "source": {
+    "elementType": "Type",
+    "outputs": [
+      {
+        "codePath": "id",
+        "outputConnections": [
+          "c0"
+        ]
+      },
+      {
+        "codePath": "name",
+        "outputConnections": [
+          "c1"
+        ]
+      }
+    ],
+    "typeName": "CryptoCoin",
+    "x": 60,
+    "y": 60
+  },
+  "target": {
+    "elementType": "Type",
+    "inputs": [
+      {
+        "codePath": "id",
+        "inputConnection": "c0"
+      },
+      {
+        "codePath": "name",
+        "inputConnection": "c1"
+      }
+    ],
+    "typeName": "CryptoCoinExtended",
+    "x": 600,
+    "y": 60
+  }
+}

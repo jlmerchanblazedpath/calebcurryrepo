@@ -1,0 +1,97 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsGetV1ExchangeMap"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "ExchangeMapResponseModel",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.listingstatus",
+        "in": "Query",
+        "name": "listing_status",
+        "remarks": "Only active exchanges are returned by default. Pass `inactive` to get a list of exchanges that are no longer active. Pass `untracked` to get a list of exchanges that are registered but do not currently meet methodology requirements to have active markets tracked. You may pass one or more comma-separated values."
+      },
+      {
+        "bind": "args.slug",
+        "in": "Query",
+        "name": "slug",
+        "remarks": "Optionally pass a comma-separated list of exchange slugs (lowercase URL friendly shorthand name with spaces replaced with dashes) to return CoinMarketCap IDs for. If this option is passed, other options will be ignored."
+      },
+      {
+        "bind": "args.start",
+        "in": "Query",
+        "name": "start",
+        "remarks": "Optionally offset the start (1-based index) of the paginated list of items to return."
+      },
+      {
+        "bind": "args.limit",
+        "in": "Query",
+        "name": "limit",
+        "remarks": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size."
+      },
+      {
+        "bind": "args.sort",
+        "in": "Query",
+        "name": "sort",
+        "remarks": "What field to sort the list of exchanges by."
+      },
+      {
+        "bind": "args.aux",
+        "in": "Query",
+        "name": "aux",
+        "remarks": "Optionally specify a comma-separated list of supplemental data fields to return. Pass `first_historical_data,last_historical_data,is_active,status` to include all auxiliary fields."
+      },
+      {
+        "bind": "args.cryptoid",
+        "in": "Query",
+        "name": "crypto_id",
+        "remarks": "Optionally include one fiat or cryptocurrency IDs to filter market pairs by. For example `?crypto_id=1` would only return exchanges that have BTC."
+      }
+    ],
+    "path": "/v1/exchange/map",
+    "remarks": "CoinMarketCap ID Map",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "Successful",
+        "typeName": "ExchangeMapResponseModel"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Bad Request",
+        "typeName": "HttpStatus400ErrorObject"
+      },
+      {
+        "httpStatus": "401",
+        "remarks": "Unauthorized",
+        "typeName": "HttpStatus401ErrorObject"
+      },
+      {
+        "httpStatus": "403",
+        "remarks": "Forbidden",
+        "typeName": "HttpStatus403ErrorObject"
+      },
+      {
+        "httpStatus": "429",
+        "remarks": "Too Many Requests",
+        "typeName": "HttpStatus429ErrorObject"
+      },
+      {
+        "httpStatus": "500",
+        "remarks": "Internal Server Error",
+        "typeName": "HttpStatus500ErrorObject"
+      }
+    ],
+    "tags": [
+      "exchange"
+    ]
+  }
+}

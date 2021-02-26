@@ -1,0 +1,80 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Refresh",
+            "widgetName": "repeater1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": []
+      },
+      "name": "main_init"
+    },
+    {
+      "algorithm": {
+        "parameters": [
+          {
+            "name": "args",
+            "type": "ArgsLoadRecords"
+          }
+        ],
+        "statements": [
+          {
+            "command": "Set",
+            "expression": "{}",
+            "variableName": "args1"
+          },
+          {
+            "command": "Set",
+            "expression": "^args.offset",
+            "variableName": "args1.offset"
+          },
+          {
+            "command": "Set",
+            "expression": "^args.limit",
+            "variableName": "args1.limit"
+          },
+          {
+            "command": "Return",
+            "expression": "MyMicroservice.GetCryptoCoinInfoFromService()"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "args1",
+            "type": "MyMicroservice.ArgsListCryptoCoins"
+          }
+        ]
+      },
+      "name": "repeater1_loadRecords"
+    }
+  ],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "cardBorder": true,
+        "cardBorderRadius": true,
+        "cardCastShadow": true,
+        "name": "repeater1",
+        "size": "12/12",
+        "uiComponentBinding": {
+          "cryptocoin": "{record}"
+        },
+        "uiComponentName": "UiCoinInfo",
+        "widget": "Repeater"
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "icon": "CryptoCoin.svg",
+    "layout": "container",
+    "title": "[[CoinWatcher]]"
+  },
+  "routing": null,
+  "unused": []
+}

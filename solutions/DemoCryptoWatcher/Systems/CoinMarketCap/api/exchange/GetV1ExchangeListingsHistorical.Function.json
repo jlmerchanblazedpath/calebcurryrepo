@@ -1,0 +1,97 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsGetV1ExchangeListingsHistorical"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "ExchangeListingsHistoricalResponseModel",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.timestamp",
+        "in": "Query",
+        "name": "timestamp",
+        "remarks": "Timestamp (Unix or ISO 8601) to return historical exchange listings for."
+      },
+      {
+        "bind": "args.start",
+        "in": "Query",
+        "name": "start",
+        "remarks": "Optionally offset the start (1-based index) of the paginated list of items to return."
+      },
+      {
+        "bind": "args.limit",
+        "in": "Query",
+        "name": "limit",
+        "remarks": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size."
+      },
+      {
+        "bind": "args.sort",
+        "in": "Query",
+        "name": "sort",
+        "remarks": "What field to sort the list of exchanges by."
+      },
+      {
+        "bind": "args.sortdir",
+        "in": "Query",
+        "name": "sort_dir",
+        "remarks": "The direction in which to order exchanges against the specified sort."
+      },
+      {
+        "bind": "args.markettype",
+        "in": "Query",
+        "name": "market_type",
+        "remarks": "The type of exchange markets to include in rankings."
+      },
+      {
+        "bind": "args.convert",
+        "in": "Query",
+        "name": "convert",
+        "remarks": "Optionally calculate market quotes in up to 120 currencies at once by passing a comma-separated list of cryptocurrency or fiat currency symbols. Each additional convert option beyond the first requires an additional call credit. A list of supported fiat options can be found [here](#section/Standards-and-Conventions). Each conversion is returned in its own \"quote\" object."
+      }
+    ],
+    "path": "/v1/exchange/listings/historical",
+    "remarks": "Listings Historical",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "Successful",
+        "typeName": "ExchangeListingsHistoricalResponseModel"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Bad Request",
+        "typeName": "HttpStatus400ErrorObject"
+      },
+      {
+        "httpStatus": "401",
+        "remarks": "Unauthorized",
+        "typeName": "HttpStatus401ErrorObject"
+      },
+      {
+        "httpStatus": "403",
+        "remarks": "Forbidden",
+        "typeName": "HttpStatus403ErrorObject"
+      },
+      {
+        "httpStatus": "429",
+        "remarks": "Too Many Requests",
+        "typeName": "HttpStatus429ErrorObject"
+      },
+      {
+        "httpStatus": "500",
+        "remarks": "Internal Server Error",
+        "typeName": "HttpStatus500ErrorObject"
+      }
+    ],
+    "tags": [
+      "exchange"
+    ]
+  }
+}

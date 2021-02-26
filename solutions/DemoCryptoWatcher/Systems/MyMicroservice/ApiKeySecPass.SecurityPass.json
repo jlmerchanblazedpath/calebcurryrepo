@@ -1,0 +1,11 @@
+{
+  "callVariableName": "",
+  "configParameterName": "RestServiceApiKey",
+  "cookieName": null,
+  "source": "ConfigParameter",
+  "usages": [
+    {
+      "securitySchemeName": "CoinMarketCap.ApiKey"
+    }
+  ]
+}

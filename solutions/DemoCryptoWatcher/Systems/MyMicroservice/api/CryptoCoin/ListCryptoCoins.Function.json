@@ -1,0 +1,58 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsListCryptoCoins"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Set",
+        "expression": "RdsSelect(MyRds.CryptoCoin, This(), [RdsConditional(id == ^args.id, !IsNull(^args.id))], id, ^args.offset, ^args.limit)",
+        "variableName": "myList"
+      },
+      {
+        "command": "ConsoleLog",
+        "expression": "^myList"
+      },
+      {
+        "command": "Return",
+        "expression": "RdsSelect(MyRds.CryptoCoin, This(), [RdsConditional(id == ^args.id, !IsNull(^args.id))], id, ^args.offset, ^args.limit)"
+      }
+    ],
+    "typeReturn": "list(CryptoCoin)",
+    "variables": [
+      {
+        "name": "myList",
+        "type": "list(CryptoCoin)"
+      }
+    ]
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.id",
+        "in": "Query",
+        "name": "id",
+        "remarks": "For filtering."
+      },
+      {
+        "bind": "args.offset",
+        "in": "Query",
+        "name": "offset",
+        "remarks": "Requested index for start the results to be provided in response."
+      },
+      {
+        "bind": "args.limit",
+        "in": "Query",
+        "name": "limit",
+        "remarks": "Requested number results to be provided in response."
+      }
+    ],
+    "path": "/crypto-coins",
+    "remarks": "Allows to get a list of CryptoCoins.",
+    "responses": []
+  }
+}

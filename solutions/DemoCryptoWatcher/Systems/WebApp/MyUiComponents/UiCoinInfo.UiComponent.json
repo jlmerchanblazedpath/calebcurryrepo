@@ -1,0 +1,98 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "ReadModel",
+            "modelVariableName": "cryptocoin",
+            "variableName": "myCoin"
+          },
+          {
+            "command": "SetIcon",
+            "expression": "^myCoin.name + \".svg\"",
+            "widgetName": "icon1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "myCoin",
+            "type": "MyMicroservice.CryptoCoinExtended"
+          }
+        ]
+      },
+      "name": "main_init"
+    }
+  ],
+  "model": [
+    {
+      "name": "cryptocoin",
+      "required": false,
+      "type": "MyMicroservice.CryptoCoinExtended"
+    }
+  ],
+  "root": {
+    "children": [
+      {
+        "name": "icon1",
+        "widget": "Icon"
+      },
+      {
+        "align": "left",
+        "color": "default",
+        "dock": "previous",
+        "name": "label1",
+        "text": "[[Name]]",
+        "widget": "Label"
+      },
+      {
+        "align": "left",
+        "binding": "cryptocoin.name",
+        "bold": true,
+        "color": "primary",
+        "dock": "previous",
+        "name": "field1",
+        "widget": "Field"
+      },
+      {
+        "align": "left",
+        "color": "default",
+        "dock": "previous",
+        "name": "label2",
+        "text": "[[LastPrice]]",
+        "widget": "Label"
+      },
+      {
+        "align": "left",
+        "binding": "cryptocoin.lastprice",
+        "color": "info",
+        "dock": "previous",
+        "format": "\"$\"",
+        "name": "field2",
+        "widget": "Field"
+      },
+      {
+        "align": "left",
+        "color": "default",
+        "dock": "previous",
+        "name": "label3",
+        "text": "[[Last24hChange]] (%)",
+        "widget": "Label"
+      },
+      {
+        "align": "left",
+        "binding": "cryptocoin.lastdaychange",
+        "color": "info",
+        "dock": "previous",
+        "name": "field3",
+        "widget": "Field"
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}

@@ -1,0 +1,121 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsGetV1ExchangeMarketpairsLatest"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "ExchangeMarketPairsLatestResponseModel",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.id",
+        "in": "Query",
+        "name": "id",
+        "remarks": "A CoinMarketCap exchange ID. Example: \"1\""
+      },
+      {
+        "bind": "args.slug",
+        "in": "Query",
+        "name": "slug",
+        "remarks": "Alternatively pass an exchange \"slug\" (URL friendly all lowercase shorthand version of name with spaces replaced with hyphens). Example: \"binance\". One \"id\" *or* \"slug\" is required."
+      },
+      {
+        "bind": "args.start",
+        "in": "Query",
+        "name": "start",
+        "remarks": "Optionally offset the start (1-based index) of the paginated list of items to return."
+      },
+      {
+        "bind": "args.limit",
+        "in": "Query",
+        "name": "limit",
+        "remarks": "Optionally specify the number of results to return. Use this parameter and the \"start\" parameter to determine your own pagination size."
+      },
+      {
+        "bind": "args.aux",
+        "in": "Query",
+        "name": "aux",
+        "remarks": "Optionally specify a comma-separated list of supplemental data fields to return. Pass `num_market_pairs,category,fee_type,market_url,currency_name,currency_slug,price_quote` to include all auxiliary fields."
+      },
+      {
+        "bind": "args.matchedid",
+        "in": "Query",
+        "name": "matched_id",
+        "remarks": "Optionally include one or more comma-delimited fiat or cryptocurrency IDs to filter market pairs by. For example `?matched_id=2781` would only return BTC markets that matched: \"BTC/USD\" or \"USD/BTC\" for the requested exchange. This parameter cannot be used when `matched_symbol` is used."
+      },
+      {
+        "bind": "args.matchedsymbol",
+        "in": "Query",
+        "name": "matched_symbol",
+        "remarks": "Optionally include one or more comma-delimited fiat or cryptocurrency symbols to filter market pairs by. For example `?matched_symbol=USD` would only return BTC markets that matched: \"BTC/USD\" or \"USD/BTC\" for the requested exchange. This parameter cannot be used when `matched_id` is used."
+      },
+      {
+        "bind": "args.category",
+        "in": "Query",
+        "name": "category",
+        "remarks": "The category of trading this market falls under. Spot markets are the most common but options include derivatives and OTC."
+      },
+      {
+        "bind": "args.feetype",
+        "in": "Query",
+        "name": "fee_type",
+        "remarks": "The fee type the exchange enforces for this market."
+      },
+      {
+        "bind": "args.convert",
+        "in": "Query",
+        "name": "convert",
+        "remarks": "Optionally calculate market quotes in up to 120 currencies at once by passing a comma-separated list of cryptocurrency or fiat currency symbols. Each additional convert option beyond the first requires an additional call credit. A list of supported fiat options can be found [here](#section/Standards-and-Conventions). Each conversion is returned in its own \"quote\" object."
+      },
+      {
+        "bind": "args.convertid",
+        "in": "Query",
+        "name": "convert_id",
+        "remarks": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used."
+      }
+    ],
+    "path": "/v1/exchange/market-pairs/latest",
+    "remarks": "Market Pairs Latest",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "Successful",
+        "typeName": "ExchangeMarketPairsLatestResponseModel"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Bad Request",
+        "typeName": "HttpStatus400ErrorObject"
+      },
+      {
+        "httpStatus": "401",
+        "remarks": "Unauthorized",
+        "typeName": "HttpStatus401ErrorObject"
+      },
+      {
+        "httpStatus": "403",
+        "remarks": "Forbidden",
+        "typeName": "HttpStatus403ErrorObject"
+      },
+      {
+        "httpStatus": "429",
+        "remarks": "Too Many Requests",
+        "typeName": "HttpStatus429ErrorObject"
+      },
+      {
+        "httpStatus": "500",
+        "remarks": "Internal Server Error",
+        "typeName": "HttpStatus500ErrorObject"
+      }
+    ],
+    "tags": [
+      "exchange"
+    ]
+  }
+}

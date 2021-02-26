@@ -1,0 +1,103 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "args",
+        "type": "ArgsGetV1ExchangeQuotesHistorical"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "ExchangeHistoricalQuotesResponseModel",
+    "variables": []
+  },
+  "routing": {
+    "method": "GET",
+    "parameters": [
+      {
+        "bind": "args.id",
+        "in": "Query",
+        "name": "id",
+        "remarks": "One or more comma-separated exchange CoinMarketCap ids. Example: \"24,270\""
+      },
+      {
+        "bind": "args.slug",
+        "in": "Query",
+        "name": "slug",
+        "remarks": "Alternatively, one or more comma-separated exchange names in URL friendly shorthand \"slug\" format (all lowercase, spaces replaced with hyphens). Example: \"binance,kraken\". At least one \"id\" *or* \"slug\" is required."
+      },
+      {
+        "bind": "args.timestart",
+        "in": "Query",
+        "name": "time_start",
+        "remarks": "Timestamp (Unix or ISO 8601) to start returning quotes for. Optional, if not passed, we'll return quotes calculated in reverse from \"time_end\"."
+      },
+      {
+        "bind": "args.timeend",
+        "in": "Query",
+        "name": "time_end",
+        "remarks": "Timestamp (Unix or ISO 8601) to stop returning quotes for (inclusive). Optional, if not passed, we'll default to the current time. If no \"time_start\" is passed, we return quotes in reverse order starting from this time."
+      },
+      {
+        "bind": "args.count",
+        "in": "Query",
+        "name": "count",
+        "remarks": "The number of interval periods to return results for. Optional, required if both \"time_start\" and \"time_end\" aren't supplied. The default is 10 items. The current query limit is 10000."
+      },
+      {
+        "bind": "args.interval",
+        "in": "Query",
+        "name": "interval",
+        "remarks": "Interval of time to return data points for. See details in endpoint description."
+      },
+      {
+        "bind": "args.convert",
+        "in": "Query",
+        "name": "convert",
+        "remarks": "By default market quotes are returned in USD. Optionally calculate market quotes in up to 3 other fiat currencies or cryptocurrencies."
+      },
+      {
+        "bind": "args.convertid",
+        "in": "Query",
+        "name": "convert_id",
+        "remarks": "Optionally calculate market quotes by CoinMarketCap ID instead of symbol. This option is identical to `convert` outside of ID format. Ex: convert_id=1,2781 would replace convert=BTC,USD in your query. This parameter cannot be used when `convert` is used."
+      }
+    ],
+    "path": "/v1/exchange/quotes/historical",
+    "remarks": "Quotes Historical",
+    "responses": [
+      {
+        "httpStatus": "200",
+        "remarks": "Successful",
+        "typeName": "ExchangeHistoricalQuotesResponseModel"
+      },
+      {
+        "httpStatus": "400",
+        "remarks": "Bad Request",
+        "typeName": "HttpStatus400ErrorObject"
+      },
+      {
+        "httpStatus": "401",
+        "remarks": "Unauthorized",
+        "typeName": "HttpStatus401ErrorObject"
+      },
+      {
+        "httpStatus": "403",
+        "remarks": "Forbidden",
+        "typeName": "HttpStatus403ErrorObject"
+      },
+      {
+        "httpStatus": "429",
+        "remarks": "Too Many Requests",
+        "typeName": "HttpStatus429ErrorObject"
+      },
+      {
+        "httpStatus": "500",
+        "remarks": "Internal Server Error",
+        "typeName": "HttpStatus500ErrorObject"
+      }
+    ],
+    "tags": [
+      "exchange"
+    ]
+  }
+}

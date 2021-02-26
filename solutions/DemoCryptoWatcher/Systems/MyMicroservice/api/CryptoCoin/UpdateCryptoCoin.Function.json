@@ -1,0 +1,42 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "id",
+        "type": "integer"
+      },
+      {
+        "name": "cryptoCoin",
+        "type": "CryptoCoin"
+      }
+    ],
+    "statements": [
+      {
+        "command": "Return",
+        "expression": "RdsUpdate(MyRds.CryptoCoin, ^cryptoCoin, id == ^id)"
+      }
+    ],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "routing": {
+    "method": "PATCH",
+    "parameters": [
+      {
+        "bind": "id",
+        "in": "Path",
+        "name": "id",
+        "remarks": "Id."
+      },
+      {
+        "bind": "cryptoCoin",
+        "in": "Body",
+        "name": "body",
+        "remarks": "New CryptoCoin information to be updated."
+      }
+    ],
+    "path": "/crypto-coin/{id}",
+    "remarks": "Allows to update an existing CryptoCoin.",
+    "responses": []
+  }
+}

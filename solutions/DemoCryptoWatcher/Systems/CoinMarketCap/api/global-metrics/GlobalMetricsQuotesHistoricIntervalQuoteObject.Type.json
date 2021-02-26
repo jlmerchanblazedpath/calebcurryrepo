@@ -1,0 +1,3 @@
+{
+  "type": "obj(active_cryptocurrencies:decimal,active_exchanges:decimal,active_market_pairs:decimal,btc_dominance:decimal,quote:GlobalMetricsQuotesHistoricQuoteCurrencyMap,search_interval:date,timestamp:date)"
+}

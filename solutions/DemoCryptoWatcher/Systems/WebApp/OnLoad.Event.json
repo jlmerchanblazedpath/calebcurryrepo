@@ -1,0 +1,39 @@
+{
+  "algorithm": {
+    "parameters": [],
+    "statements": [
+      {
+        "command": "LoadResource",
+        "expressionPath": "\"/CultureEn.json\"",
+        "variableName": "culture"
+      },
+      {
+        "command": "LoadResource",
+        "expressionPath": "\"/MenuMain.json\"",
+        "variableName": "menu"
+      },
+      {
+        "command": "Launch",
+        "expressionCulture": "^culture",
+        "expressionIcon": "\"CryptoCoin.svg\"",
+        "expressionMainMenu": "^menu",
+        "expressionSubTitle": "null",
+        "expressionTitle": "\"CryptoWatcher\"",
+        "expressionToolsMenu": "null",
+        "search": "enable",
+        "uiComponentName": "CmpHome"
+      }
+    ],
+    "typeReturn": "any",
+    "variables": [
+      {
+        "name": "culture",
+        "type": "Culture"
+      },
+      {
+        "name": "menu",
+        "type": "list(MenuItem)"
+      }
+    ]
+  }
+}

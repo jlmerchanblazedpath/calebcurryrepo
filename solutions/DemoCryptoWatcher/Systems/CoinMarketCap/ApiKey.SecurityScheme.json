@@ -1,0 +1,16 @@
+{
+  "algorithm": {
+    "parameters": [
+      {
+        "name": "key",
+        "type": "string"
+      }
+    ],
+    "statements": [],
+    "typeReturn": "any",
+    "variables": []
+  },
+  "apiKeyIn": "Query",
+  "apiKeyName": "CMC_PRO_API_KEY",
+  "securityType": "ApiKey"
+}

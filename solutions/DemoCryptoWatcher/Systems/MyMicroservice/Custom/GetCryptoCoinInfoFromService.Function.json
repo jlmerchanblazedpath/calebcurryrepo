@@ -1,0 +1,103 @@
+{
+  "algorithm": {
+    "parameters": [],
+    "statements": [
+      {
+        "command": "Set",
+        "expression": "{}",
+        "variableName": "args"
+      },
+      {
+        "command": "Set",
+        "expression": "CoinMarketCap.GetV1CryptocurrencyListingsLatest(^args)",
+        "variableName": "responseListingLatest"
+      },
+      {
+        "command": "Set",
+        "expression": "ListCryptoCoins({})",
+        "variableName": "myListCryptoCoin"
+      },
+      {
+        "command": "Set",
+        "expression": "[]",
+        "variableName": "myListCryptoCoinExtended"
+      },
+      {
+        "children": [
+          {
+            "command": "Set",
+            "expression": "Transform(TrfExtendCryptoCoin, ^oneCryptoCoin)",
+            "variableName": "oneCryptoCoinExtended"
+          },
+          {
+            "command": "Set",
+            "expression": "FindFirst(^responseListingLatest.data, name == ^oneCryptoCoin.name )",
+            "variableName": "singleCryptoFromResponse"
+          },
+          {
+            "command": "Set",
+            "expression": "^singleCryptoFromResponse.quote",
+            "variableName": "asd"
+          },
+          {
+            "command": "Set",
+            "expression": "^asd.USD.price",
+            "variableName": "oneCryptoCoinExtended.lastprice"
+          },
+          {
+            "command": "Push",
+            "expressionItem": "^oneCryptoCoinExtended",
+            "variableNameList": "myListCryptoCoinExtended"
+          }
+        ],
+        "command": "ForEach",
+        "expressionList": "^myListCryptoCoin",
+        "variableNameItem": "oneCryptoCoin"
+      },
+      {
+        "command": "Return",
+        "expression": "^myListCryptoCoinExtended"
+      }
+    ],
+    "typeReturn": "list(CryptoCoinExtended)",
+    "variables": [
+      {
+        "name": "args",
+        "type": "CoinMarketCap.ArgsGetV1CryptocurrencyListingsLatest"
+      },
+      {
+        "name": "myListCryptoCoin",
+        "type": "list(CryptoCoin)"
+      },
+      {
+        "name": "oneCryptoCoin",
+        "type": "CryptoCoin"
+      },
+      {
+        "name": "myListCryptoCoinExtended",
+        "type": "list(CryptoCoinExtended)"
+      },
+      {
+        "name": "oneCryptoCoinExtended",
+        "type": "CryptoCoinExtended"
+      },
+      {
+        "name": "responseListingLatest",
+        "type": "CoinMarketCap.CryptocurrencyListingsLatestResponseModel1"
+      },
+      {
+        "name": "singleCryptoFromResponse",
+        "type": "CoinMarketCap.CryptocurrencyListingsLatestCryptocurrencyObject1"
+      },
+      {
+        "name": "asd",
+        "type": "any"
+      }
+    ]
+  },
+  "routing": {
+    "method": "GET",
+    "path": "/getcryptocoininfofromservice",
+    "remarks": "get everything but only the ones i care"
+  }
+}

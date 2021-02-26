@@ -1,0 +1,22 @@
+{
+  "eventsAndFunctions": [],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "color": "default",
+        "name": "label1",
+        "text": "Placeholder",
+        "widget": "Label"
+      }
+    ],
+    "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-main",
+    "horizontalSeparation": "large",
+    "layout": "container",
+    "verticalSeparation": "large"
+  },
+  "routing": {
+    "path": "/home"
+  },
+  "unused": []
+}

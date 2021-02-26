@@ -1,0 +1,23 @@
+{
+  "autoincrementalPrimaryKey": true,
+  "columns": [
+    {
+      "alias": "id",
+      "name": "id",
+      "primaryKey": true,
+      "type": "integer"
+    },
+    {
+      "alias": "name",
+      "name": "Name",
+      "type": "string"
+    }
+  ],
+  "foreignKeys": [],
+  "indexes": [],
+  "isView": false,
+  "primaryKeyName": "id",
+  "sequenceName": "",
+  "tableName": "TBL_CRIPTO_COIN",
+  "uniqueKeys": []
+}
