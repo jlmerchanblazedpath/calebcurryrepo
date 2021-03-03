@@ -45,6 +45,11 @@
             "variableName": "oneCryptoCoinExtended.lastprice"
           },
           {
+            "command": "Set",
+            "expression": "^asd.USD.percent_change_24h",
+            "variableName": "oneCryptoCoinExtended.lastdaychange"
+          },
+          {
             "command": "Push",
             "expressionItem": "^oneCryptoCoinExtended",
             "variableNameList": "myListCryptoCoinExtended"

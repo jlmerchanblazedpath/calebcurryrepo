@@ -36,10 +36,6 @@
     },
     {
       "fromSystemName": "WebApp",
-      "toSystemName": "CoinMarketCap"
-    },
-    {
-      "fromSystemName": "WebApp",
       "toSystemName": "MyMicroservice"
     }
   ]

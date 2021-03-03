@@ -69,7 +69,7 @@
         "binding": "cryptocoin.lastprice",
         "color": "info",
         "dock": "previous",
-        "format": "\"$\"",
+        "format": "Money",
         "name": "field2",
         "widget": "Field"
       },
