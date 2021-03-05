@@ -7,6 +7,12 @@
       "y": 106
     },
     {
+      "name": "MockCoinHistoric",
+      "type": "Microservice",
+      "x": 431,
+      "y": 440
+    },
+    {
       "name": "MyMicroservice",
       "type": "Microservice",
       "x": 189,
@@ -29,6 +35,10 @@
     {
       "fromSystemName": "MyMicroservice",
       "toSystemName": "CoinMarketCap"
+    },
+    {
+      "fromSystemName": "MyMicroservice",
+      "toSystemName": "MockCoinHistoric"
     },
     {
       "fromSystemName": "MyMicroservice",

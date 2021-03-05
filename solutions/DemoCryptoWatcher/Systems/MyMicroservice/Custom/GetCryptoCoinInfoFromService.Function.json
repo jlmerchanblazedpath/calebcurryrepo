@@ -50,6 +50,11 @@
             "variableName": "oneCryptoCoinExtended.lastdaychange"
           },
           {
+            "command": "Set",
+            "expression": "MockCoinHistoric.GetMockData(^oneCryptoCoinExtended.name)",
+            "variableName": "oneCryptoCoinExtended.historicData"
+          },
+          {
             "command": "Push",
             "expressionItem": "^oneCryptoCoinExtended",
             "variableNameList": "myListCryptoCoinExtended"
