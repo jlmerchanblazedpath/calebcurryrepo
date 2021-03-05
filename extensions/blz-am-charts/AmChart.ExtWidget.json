@@ -1,34 +1,35 @@
 {
-  "tags": [
-    "panel"
-  ],
-  "icon": "widget-am-chart",
   "attributes": [
-      { 
-        "name": "config", 
-        "label": "Config", 
-        "type": "json", 
-        "remarks": "Defines the configuration for this chart." 
-      }
-  ],
-  "methods": [
-    "getValue", 
-    "setValue", 
-    "load", 
-    "refresh", 
-    "show", 
-    "hide"
+    {
+      "label": "Config",
+      "name": "config",
+      "remarks": "Defines the configuration for this chart.",
+      "type": "json"
+    }
   ],
   "events": [
-      { 
-        "name": "loadRecords", 
-        "typeReturn": "any", 
-        "parameters": [
-          { 
-            "name": "args", 
-            "type": "ArgsLoadRecords" 
-            }
-          ] 
-      }
-  ]  
+    {
+      "name": "loadRecords",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "ArgsLoadRecords"
+        }
+      ],
+      "typeReturn": "any"
+    }
+  ],
+  "icon": "widget-am-chart",
+  "methods": [
+    "getValue",
+    "setValue",
+    "load",
+    "refresh",
+    "show",
+    "hide"
+  ],
+  "remarks": "",
+  "tags": [
+    "panel"
+  ]
 }
