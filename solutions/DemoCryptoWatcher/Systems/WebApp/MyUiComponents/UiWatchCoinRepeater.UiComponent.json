@@ -56,24 +56,26 @@
   ],
   "model": [],
   "root": {
+    "alignItems": "center",
     "children": [
       {
-        "cardBorder": true,
+        "cardBorder": "large",
         "cardBorderRadius": true,
         "cardCastShadow": true,
+        "icon": "chart.svg",
         "name": "repeater1",
-        "size": "12/12",
+        "size": "two-third",
+        "title": "[[CoinWatcher]]",
         "uiComponentBinding": {
           "cryptocoin": "{record}"
         },
         "uiComponentName": "UiCoinInfo",
+        "verticalSeparation": "large",
         "widget": "Repeater"
       }
     ],
-    "cssClass": "blz-area-default",
-    "icon": "CryptoCoin.svg",
-    "layout": "container",
-    "title": "[[CoinWatcher]]"
+    "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-default",
+    "layout": "container"
   },
   "routing": null,
   "unused": []

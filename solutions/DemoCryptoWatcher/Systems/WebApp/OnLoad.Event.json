@@ -21,7 +21,7 @@
         "expressionTitle": "\"CryptoWatcher\"",
         "expressionToolsMenu": "null",
         "search": "enable",
-        "uiComponentName": "CmpHome"
+        "uiComponentName": "UiWatchCoinRepeater"
       }
     ],
     "typeReturn": "any",

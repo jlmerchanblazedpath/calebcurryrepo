@@ -18,14 +18,19 @@
   ],
   "model": [],
   "root": {
+    "alignItems": "center",
     "children": [
       {
-        "htmlTemplate": "<div>\n  <section class=\"article-body simple\"><div id=\"node-2\" class=\"article-pharagraph\"><p class=\"text\">CryptoWatcher is a demo media platform for the next generation of investors exploring how cryptocurrencies and digital assets are contributing to the evolution of the global financial system. Its mandate is to inform, educate, and connect the global investment community through news, data, events and education.</p></div><div id=\"node-3\" class=\"article-pharagraph\"><p class=\"text\">Founded in May 2021, CryptoWatcher seeks to reach users interested in digital assets and blockchain technology through its \n          <a href=\"/\">website</a>, \n          <a href=\"https://twitter.com/coindesk\" target=\"_blank\" rel=\"noopener noreferrer\">social</a> \n          <a href=\"https://facebook.com/coindesk\" target=\"_blank\" rel=\"noopener noreferrer\">media</a>, \n          <a href=\"/newsletters\">newsletters</a>, \n          <a href=\"/podcasts\">podcasts</a>, \n          <a href=\"https://www.youtube.com/coindesk\" target=\"_blank\" rel=\"noopener noreferrer\">video</a>,\n          <a href=\"/research-archive\">research</a> and\n          <a href=\"/events\">live events</a>.\n          CryptoWatcher uses the original price reference rate known as the Bitcoin Price Index that exists since 2013 which is widely sourced in the media including The Wall Street Journal, Financial Times, CNBC, and many others on a daily basis.</p></div>\n    </section>\n</div>",
+        "cssClass": "blz-padding-bottom-large",
+        "htmlTemplate": "<div>\n    <section style=\"padding-left: 25px;padding-right: 25px\">\n        <div>\n            <h5 style=\"text-align: justify;\">CryptoWatcher is a demo media platform for the next generation of investors exploring how\n                cryptocurrencies and digital assets are contributing to the evolution of the global financial system.\n                Its mandate is to inform, educate, and connect the global investment community through news, data,\n                events and education.\n            </h5>\n        </div>\n        <div>\n            <p style=\"text-align: justify;\">Founded in May 2021, CryptoWatcher seeks to reach users interested in digital assets and\n                blockchain technology through its\n                <a class=\"blz-color-link\" href=\"/\">website</a>,\n                <a class=\"blz-color-link\" href=\"https://twitter.com/coindesk\" target=\"_blank\" rel=\"noopener noreferrer\">social</a>\n                <a class=\"blz-color-link\" href=\"https://facebook.com/coindesk\" target=\"_blank\" rel=\"noopener noreferrer\">media</a>,\n                <a class=\"blz-color-link\" href=\"/newsletters\">newsletters</a>,\n                <a class=\"blz-color-link\" href=\"/podcasts\">podcasts</a>,\n                <a class=\"blz-color-link\" href=\"https://www.youtube.com/coindesk\" target=\"_blank\" rel=\"noopener noreferrer\">video</a>,\n                <a class=\"blz-color-link\" href=\"/research-archive\">research</a> and\n                <a class=\"blz-color-link\" href=\"/events\">live events</a>.\n                CryptoWatcher uses the original price reference rate known as the Bitcoin Price Index that exists since\n                2013 which is widely sourced in the media including The Wall Street Journal, Financial Times, CNBC, and\n                many others on a daily basis.\n            </p>\n        </div>\n    </section>\n</div>",
+        "icon": "about.svg",
         "name": "htmlrenderer1",
+        "size": "two-third",
+        "title": "About",
         "widget": "HtmlRenderer"
       }
     ],
-    "cssClass": "blz-area-default",
+    "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-default",
     "layout": "container"
   },
   "routing": null,

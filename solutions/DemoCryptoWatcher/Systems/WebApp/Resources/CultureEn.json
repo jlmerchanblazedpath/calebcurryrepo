@@ -129,6 +129,22 @@
     {
       "key": "ShowMore",
       "value": "Show More"
+    },
+    {
+      "key": "Name",
+      "value": "Name"
+    },
+    {
+      "key": "LastPrice",
+      "value": "Last Price"
+    },
+    {
+      "key": "Last24hChange",
+      "value": "24h Change"
+    },
+    {
+      "key": "CoinWatcher",
+      "value": "Coin Watcher"
     }
   ]
 }
