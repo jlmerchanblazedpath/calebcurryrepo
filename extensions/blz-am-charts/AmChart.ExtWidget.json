@@ -1,0 +1,34 @@
+{
+  "tags": [
+    "panel"
+  ],
+  "icon": "widget-am-chart",
+  "attributes": [
+      { 
+        "name": "config", 
+        "label": "Config", 
+        "type": "json", 
+        "remarks": "Defines the configuration for this chart." 
+      }
+  ],
+  "methods": [
+    "getValue", 
+    "setValue", 
+    "load", 
+    "refresh", 
+    "show", 
+    "hide"
+  ],
+  "events": [
+      { 
+        "name": "loadRecords", 
+        "typeReturn": "any", 
+        "parameters": [
+          { 
+            "name": "args", 
+            "type": "ArgsLoadRecords" 
+            }
+          ] 
+      }
+  ]  
+}
