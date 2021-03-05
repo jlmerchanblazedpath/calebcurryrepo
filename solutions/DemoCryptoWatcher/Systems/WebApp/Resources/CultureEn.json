@@ -145,6 +145,10 @@
     {
       "key": "CoinWatcher",
       "value": "Coin Watcher"
+    },
+    {
+      "key": "AboutUs",
+      "value": "About Us"
     }
   ]
 }
