@@ -1,0 +1,134 @@
+{
+  "dateFormat": "{mm}/{dd}/{yyyy}",
+  "decimalSymbol": ".",
+  "longDateFormat": "{weekDay} {d} {month}, {yyyy}",
+  "moneySymbol": "$",
+  "thousandsSeparator": ",",
+  "timeFormat": "{HH12}:{MM} {AMPM}",
+  "translations": [
+    {
+      "key": "Ok",
+      "value": "Ok"
+    },
+    {
+      "key": "Cancel",
+      "value": "Cancel"
+    },
+    {
+      "key": "Yes",
+      "value": "Yes"
+    },
+    {
+      "key": "No",
+      "value": "No"
+    },
+    {
+      "key": "Previous",
+      "value": "Previous"
+    },
+    {
+      "key": "Next",
+      "value": "Next"
+    },
+    {
+      "key": "Finish",
+      "value": "Finish"
+    },
+    {
+      "key": "AddFilter",
+      "value": "Add Filter"
+    },
+    {
+      "key": "RequiredField",
+      "value": "Required Field"
+    },
+    {
+      "key": "SelectAll",
+      "value": "Select All"
+    },
+    {
+      "key": "Unselect All",
+      "value": "Unselect All"
+    },
+    {
+      "key": "Sunday",
+      "value": "Sunday"
+    },
+    {
+      "key": "Monday",
+      "value": "Monday"
+    },
+    {
+      "key": "Tuesday",
+      "value": "Tuesday"
+    },
+    {
+      "key": "Wednesday",
+      "value": "Wednesday"
+    },
+    {
+      "key": "Thursday",
+      "value": "Thursday"
+    },
+    {
+      "key": "Friday",
+      "value": "Friday"
+    },
+    {
+      "key": "Saturday",
+      "value": "Saturday"
+    },
+    {
+      "key": "January",
+      "value": "January"
+    },
+    {
+      "key": "February",
+      "value": "February"
+    },
+    {
+      "key": "March",
+      "value": "March"
+    },
+    {
+      "key": "April",
+      "value": "April"
+    },
+    {
+      "key": "May",
+      "value": "May"
+    },
+    {
+      "key": "June",
+      "value": "June"
+    },
+    {
+      "key": "July",
+      "value": "July"
+    },
+    {
+      "key": "August",
+      "value": "August"
+    },
+    {
+      "key": "September",
+      "value": "September"
+    },
+    {
+      "key": "October",
+      "value": "October"
+    },
+    {
+      "key": "November",
+      "value": "November"
+    },
+    {
+      "key": "December",
+      "value": "December"
+    },
+    {
+      "key": "ShowMore",
+      "value": "Show More"
+    }
+  ]
+}

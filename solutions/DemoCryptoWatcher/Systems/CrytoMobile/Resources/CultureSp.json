@@ -1,0 +1,134 @@
+{
+  "dateFormat": "{dd}/{mm}/{yyyy}",
+  "decimalSymbol": ".",
+  "longDateFormat": "{weekDay} {d} {month}, {yyyy}",
+  "moneySymbol": "$",
+  "thousandsSeparator": ",",
+  "timeFormat": "{HH12}:{MM} {AMPM}",
+  "translations": [
+    {
+      "key": "Ok",
+      "value": "Aceptar"
+    },
+    {
+      "key": "Cancel",
+      "value": "Cancelar"
+    },
+    {
+      "key": "Yes",
+      "value": "Si"
+    },
+    {
+      "key": "No",
+      "value": "No"
+    },
+    {
+      "key": "Previous",
+      "value": "Anterior"
+    },
+    {
+      "key": "Next",
+      "value": "Siguiente"
+    },
+    {
+      "key": "Finish",
+      "value": "Finalizar"
+    },
+    {
+      "key": "AddFilter",
+      "value": "Agregar Filtro"
+    },
+    {
+      "key": "RequiredField",
+      "value": "Campo Requerido"
+    },
+    {
+      "key": "SelectAll",
+      "value": "Seleccionar Todos"
+    },
+    {
+      "key": "Unselect All",
+      "value": "Deseleccionar Todos"
+    },
+    {
+      "key": "Sunday",
+      "value": "Domingo"
+    },
+    {
+      "key": "Monday",
+      "value": "Lunes"
+    },
+    {
+      "key": "Tuesday",
+      "value": "Martes"
+    },
+    {
+      "key": "Wednesday",
+      "value": "Miércoles"
+    },
+    {
+      "key": "Thursday",
+      "value": "Jueves"
+    },
+    {
+      "key": "Friday",
+      "value": "Viernes"
+    },
+    {
+      "key": "Saturday",
+      "value": "Sábado"
+    },
+    {
+      "key": "January",
+      "value": "Enero"
+    },
+    {
+      "key": "February",
+      "value": "Febrero"
+    },
+    {
+      "key": "March",
+      "value": "Marzo"
+    },
+    {
+      "key": "April",
+      "value": "Abril"
+    },
+    {
+      "key": "May",
+      "value": "Mayo"
+    },
+    {
+      "key": "June",
+      "value": "Junio"
+    },
+    {
+      "key": "July",
+      "value": "Julio"
+    },
+    {
+      "key": "August",
+      "value": "Agosto"
+    },
+    {
+      "key": "September",
+      "value": "Septiembre"
+    },
+    {
+      "key": "October",
+      "value": "Octubre"
+    },
+    {
+      "key": "November",
+      "value": "Noviembre"
+    },
+    {
+      "key": "December",
+      "value": "Diciembre"
+    },
+    {
+      "key": "ShowMore",
+      "value": "Mostrar Más"
+    }
+  ]
+}

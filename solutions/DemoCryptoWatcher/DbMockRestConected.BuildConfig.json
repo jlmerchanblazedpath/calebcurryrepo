@@ -36,6 +36,31 @@
             "rdsTableName": "CryptoCoin",
             "id": "Ethereum",
             "name": "Ethereum"
+          },
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "Dogecoin",
+            "name": "Dogecoin"
+          },
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "Tether",
+            "name": "Tether"
+          },
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "VeChain",
+            "name": "VeChain"
+          },
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "Aave",
+            "name": "Aave"
+          },
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "Neo",
+            "name": "Neo"
           }
         ]
       }

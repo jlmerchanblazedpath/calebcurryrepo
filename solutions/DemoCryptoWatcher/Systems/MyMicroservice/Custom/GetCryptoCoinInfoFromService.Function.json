@@ -51,7 +51,7 @@
           },
           {
             "command": "Set",
-            "expression": "MockCoinHistoric.GetMockData(^oneCryptoCoinExtended.name)",
+            "expression": "MockCoinHistoric.GetMockData(^oneCryptoCoinExtended.name, ^asd.USD.percent_change_24h)",
             "variableName": "oneCryptoCoinExtended.historicData"
           },
           {
