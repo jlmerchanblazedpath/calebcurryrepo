@@ -1,0 +1,29 @@
+{
+  "eventsAndFunctions": [],
+  "model": [
+    {
+      "name": "instance",
+      "required": false,
+      "type": "MyMicroservice.CryptoCoin"
+    }
+  ],
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "binding": "instance.name",
+            "label": "Name",
+            "name": "txtName",
+            "widget": "TextBox"
+          }
+        ],
+        "layout": "container"
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}

@@ -1,0 +1,278 @@
+{
+  "eventsAndFunctions": [
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "command": "Refresh",
+            "widgetName": "grid1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": []
+      },
+      "name": "grid1_init"
+    },
+    {
+      "algorithm": {
+        "parameters": [
+          {
+            "name": "args",
+            "type": "ArgsLoadRecords"
+          }
+        ],
+        "statements": [
+          {
+            "command": "Set",
+            "expression": "{}",
+            "variableName": "args1"
+          },
+          {
+            "command": "Set",
+            "expression": "^args.offset",
+            "variableName": "args1.offset"
+          },
+          {
+            "command": "Set",
+            "expression": "^args.limit",
+            "variableName": "args1.limit"
+          },
+          {
+            "command": "Return",
+            "expression": "MyMicroservice.ListCryptoCoins(^args1)"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "args1",
+            "type": "MyMicroservice.ArgsListCryptoCoins"
+          }
+        ]
+      },
+      "name": "grid1_loadRecords"
+    },
+    {
+      "algorithm": {
+        "parameters": [],
+        "statements": [
+          {
+            "buttons": "ok-cancel",
+            "command": "Open",
+            "expressionIcon": "\"add.svg\"",
+            "expressionStartModel": "{}",
+            "expressionTitle": "\"[[AddNewCoin]]\"",
+            "mode": "right-drawer",
+            "size": "default",
+            "uiComponentName": "CryptoCoinForm"
+          },
+          {
+            "children": [
+              {
+                "command": "Set",
+                "expression": "^openedModel.instance",
+                "variableName": "myCoinInfo"
+              },
+              {
+                "command": "Execute",
+                "expression": "MyMicroservice.CreateCryptoCoin(^myCoinInfo)"
+              },
+              {
+                "command": "CloseCurrent"
+              },
+              {
+                "command": "Refresh",
+                "widgetName": "grid1"
+              }
+            ],
+            "command": "OnOk",
+            "variableNameOpenedModel": "openedModel"
+          },
+          {
+            "children": [
+              {
+                "command": "CloseCurrent"
+              }
+            ],
+            "command": "OnCancel"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "openedModel",
+            "type": "any"
+          },
+          {
+            "name": "myCoinInfo",
+            "type": "MyMicroservice.CryptoCoin\n"
+          }
+        ]
+      },
+      "name": "grid1_handlerAction_Add"
+    },
+    {
+      "algorithm": {
+        "parameters": [
+          {
+            "name": "recordRef",
+            "type": "string"
+          },
+          {
+            "name": "arg",
+            "type": "string"
+          }
+        ],
+        "statements": [
+          {
+            "command": "ReadRecord",
+            "expressionRecordRef": "^recordRef",
+            "variableName": "myCoin",
+            "widgetName": "grid1"
+          },
+          {
+            "command": "Execute",
+            "expression": "MyMicroservice.DeleteCryptoCoin(myCoin.id)"
+          },
+          {
+            "command": "Refresh",
+            "widgetName": "grid1"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "myCoin",
+            "type": "MyMicroservice.CryptoCoin"
+          }
+        ]
+      },
+      "name": "grid1_handlerRecordAction_Remove"
+    },
+    {
+      "algorithm": {
+        "parameters": [
+          {
+            "name": "recordRef",
+            "type": "string"
+          },
+          {
+            "name": "arg",
+            "type": "string"
+          }
+        ],
+        "statements": [
+          {
+            "command": "ReadRecord",
+            "expressionRecordRef": "^recordRef",
+            "variableName": "myCoin",
+            "widgetName": "grid1"
+          },
+          {
+            "buttons": "ok-cancel",
+            "command": "Open",
+            "expressionIcon": "\"edit.svg\"",
+            "expressionStartModel": "{ instance: ^myCoin }",
+            "expressionTitle": "\"Edit\"",
+            "mode": "right-drawer",
+            "size": "default",
+            "uiComponentName": "CryptoCoinForm"
+          },
+          {
+            "children": [
+              {
+                "command": "Set",
+                "expression": "^openedModel.instance",
+                "variableName": "myCoin"
+              },
+              {
+                "command": "Execute",
+                "expression": "MyMicroservice.UpdateCryptoCoin(^myCoin.id, ^myCoin)"
+              },
+              {
+                "command": "CloseCurrent"
+              },
+              {
+                "command": "Refresh",
+                "widgetName": "grid1"
+              }
+            ],
+            "command": "OnOk",
+            "variableNameOpenedModel": "openedModel"
+          },
+          {
+            "children": [
+              {
+                "command": "CloseCurrent"
+              }
+            ],
+            "command": "OnCancel"
+          }
+        ],
+        "typeReturn": "any",
+        "variables": [
+          {
+            "name": "openedModel",
+            "type": "any"
+          },
+          {
+            "name": "myCoin",
+            "type": "MyMicroservice.CryptoCoin"
+          }
+        ]
+      },
+      "name": "grid1_handlerRecordAction_Edit"
+    }
+  ],
+  "model": [],
+  "root": {
+    "children": [
+      {
+        "actions": [
+          {
+            "icon": "add.svg",
+            "key": "Add",
+            "text": "[[Add]]"
+          }
+        ],
+        "columns": [
+          {
+            "align": "left",
+            "bindText": "id",
+            "format": "Number",
+            "header": "Id",
+            "size": 1
+          },
+          {
+            "align": "left",
+            "bindText": "name",
+            "header": "Name",
+            "size": 1
+          }
+        ],
+        "name": "grid1",
+        "pageSize": 20,
+        "recordActions": [
+          {
+            "icon": "edit.svg",
+            "key": "Edit",
+            "text": "[[Edit]]"
+          },
+          {
+            "icon": "remove.svg",
+            "key": "Remove",
+            "text": "[[Remove]]"
+          }
+        ],
+        "typeName": "MyMicroservice.CryptoCoin",
+        "widget": "Grid",
+        "withPaging": true
+      }
+    ],
+    "cssClass": "blz-area-default",
+    "layout": "container"
+  },
+  "routing": null,
+  "unused": []
+}

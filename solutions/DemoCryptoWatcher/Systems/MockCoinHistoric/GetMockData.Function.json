@@ -12,10 +12,6 @@
     ],
     "statements": [
       {
-        "command": "ConsoleLog",
-        "expression": "^sign"
-      },
-      {
         "children": [
           {
             "command": "Return",

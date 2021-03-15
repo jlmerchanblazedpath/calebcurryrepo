@@ -8,15 +8,6 @@
     ],
     "statements": [
       {
-        "command": "Set",
-        "expression": "RdsSelect(MyRds.CryptoCoin, This(), [RdsConditional(id == ^args.id, !IsNull(^args.id))], id, ^args.offset, ^args.limit)",
-        "variableName": "myList"
-      },
-      {
-        "command": "ConsoleLog",
-        "expression": "^myList"
-      },
-      {
         "command": "Return",
         "expression": "RdsSelect(MyRds.CryptoCoin, This(), [RdsConditional(id == ^args.id, !IsNull(^args.id))], id, ^args.offset, ^args.limit)"
       }

@@ -49,18 +49,33 @@
           },
           {
             "rdsTableName": "CryptoCoin",
-            "id": "VeChain",
-            "name": "VeChain"
+            "id": "Chainlink",
+            "name": "Chainlink"
           },
           {
             "rdsTableName": "CryptoCoin",
-            "id": "Aave",
-            "name": "Aave"
+            "id": "Litecoin",
+            "name": "Litecoin"
+          },
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "Tron",
+            "name": "TRON"
+          },
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "Cardano",
+            "name": "Cardano"
           },
           {
             "rdsTableName": "CryptoCoin",
             "id": "Neo",
             "name": "Neo"
+          },
+          {
+            "rdsTableName": "CryptoCoin",
+            "id": "Stellar",
+            "name": "Stellar"
           }
         ]
       }

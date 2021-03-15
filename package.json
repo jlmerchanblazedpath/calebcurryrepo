@@ -1,6 +1,6 @@
 {
   "blazedpath": {
-    "version": "2021.01.11"
+    "version": "2021.03.08"
   },
   "publishConfig": {
     "registry": "https://packages.blazedpath.com/repository/blz-packages",

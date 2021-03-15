@@ -7,12 +7,6 @@
       "y": 98
     },
     {
-      "name": "CrytoMobile",
-      "type": "MobileApp",
-      "x": 190,
-      "y": 447
-    },
-    {
       "name": "MockCoinHistoric",
       "type": "Microservice",
       "x": 431,
@@ -38,10 +32,6 @@
     }
   ],
   "references": [
-    {
-      "fromSystemName": "CrytoMobile",
-      "toSystemName": "MyMicroservice"
-    },
     {
       "fromSystemName": "MyMicroservice",
       "toSystemName": "CoinMarketCap"

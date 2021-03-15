@@ -10,5 +10,18 @@
     "icon": "about.svg",
     "text": "[[AboutUs]]",
     "uiComponentName": "UiAboutUs"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "icon": "about.svg",
+        "text": "[[AdminWatchProfile]]",
+        "uiComponentName": "CryptoCoinList"
+      }
+  	],
+    "icon": "about.svg",
+    "text": "[[Admin]]",
+    "uiComponentName": ""
   }
 ]

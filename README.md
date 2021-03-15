@@ -13,7 +13,7 @@ Open up a browser. go to cloud.blazedpath.com:
 Steps:
 1) Go to repositories.
 	Create new.
-	Add the https url for the git: (Eg. https://github.com/jlmerchanblazedpath/testCalebCurry.git))
+	Add the https url for the git: (Eg. https://github.com/jlmerchanblazedpath/calebcurryrepo.git))
 
 2) Got to Pipelines -> Build & Deploy -> Create New
 	Build&Deploy (GitHub)
