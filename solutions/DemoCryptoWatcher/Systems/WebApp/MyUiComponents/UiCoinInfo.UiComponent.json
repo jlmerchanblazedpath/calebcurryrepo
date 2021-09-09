@@ -20,11 +20,6 @@
             "variableName": "myCoin.lastprice"
           },
           {
-            "command": "Set",
-            "expression": "Round(^myCoin.lastdaychange, 3)\n",
-            "variableName": "myCoin.lastdaychange"
-          },
-          {
             "command": "WriteModel",
             "expression": "myCoin",
             "modelVariableName": "cryptocoin"

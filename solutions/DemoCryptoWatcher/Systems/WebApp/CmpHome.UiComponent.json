@@ -8,6 +8,10 @@
         "name": "label1",
         "text": "Placeholder",
         "widget": "Label"
+      },
+      {
+        "name": "amchart1",
+        "widget": "AmChart"
       }
     ],
     "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-main",

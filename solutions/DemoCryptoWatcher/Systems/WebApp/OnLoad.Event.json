@@ -15,7 +15,7 @@
       {
         "command": "Launch",
         "expressionCulture": "^culture",
-        "expressionIcon": "\"CryptoCoin.svg\"",
+        "expressionIcon": "\"Algo.svg\"",
         "expressionMainMenu": "^menu",
         "expressionSubTitle": "null",
         "expressionTitle": "\"CryptoWatcher\"",

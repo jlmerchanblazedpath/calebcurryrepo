@@ -88,14 +88,6 @@
             ],
             "command": "OnOk",
             "variableNameOpenedModel": "openedModel"
-          },
-          {
-            "children": [
-              {
-                "command": "CloseCurrent"
-              }
-            ],
-            "command": "OnCancel"
           }
         ],
         "typeReturn": "any",
@@ -200,14 +192,6 @@
             ],
             "command": "OnOk",
             "variableNameOpenedModel": "openedModel"
-          },
-          {
-            "children": [
-              {
-                "command": "CloseCurrent"
-              }
-            ],
-            "command": "OnCancel"
           }
         ],
         "typeReturn": "any",
@@ -273,6 +257,8 @@
     "cssClass": "blz-area-default",
     "layout": "container"
   },
-  "routing": null,
+  "routing": {
+    "path": "/gridcryptocoins"
+  },
   "unused": []
 }

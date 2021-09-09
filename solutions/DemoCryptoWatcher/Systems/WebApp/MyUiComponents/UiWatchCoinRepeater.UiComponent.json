@@ -77,6 +77,8 @@
     "cssClass": "blz-padding-top-large blz-padding-right-large blz-padding-left-large blz-padding-bottom-large blz-area-default",
     "layout": "container"
   },
-  "routing": null,
+  "routing": {
+    "path": "/uiwatchcoinrepeater"
+  },
   "unused": []
 }
